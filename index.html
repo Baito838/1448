@@ -15,6 +15,7 @@
 
     <!-- My Style -->
     <link rel="stylesheet" href="style.css">
+    <script defer src="script/transition.js"></script>
 
     <title>14 : 48</title>
 
@@ -27,15 +28,44 @@
             max-width: 300px;
             max-height: 300px;
         }
-        .embla {
-        overflow: hidden;
+        
+        .table tr td {
+            font-family: Hercey_serif;
         }
-        .embla__container {
-        display: flex;
+
+        .img-drink {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
         }
-        .embla__slide {
-        flex: 0 0 100%;
-        min-width: 0;
+
+        body::-webkit-scrollbar {
+        width: 1em;
+        }
+        
+        body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        body::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+        }
+
+        .coffee::-webkit-scrollbar {
+        width: 1em;
+        }
+        
+        .coffee::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px transparent;
+        }
+        
+        .coffee::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        outline: 1px solid transparent;
         }
     </style>
 </head>
@@ -54,31 +84,111 @@
 
     <section id="hero">
             <div>
-                <h1 class="title-hero">Coffee Shop</h1>
-                <h4 class="text-light hero-subtitle">We Serve You Better</h4>
+                <h1 class="title-hero hidden">Coffee Shop</h1>
+                <h4 class="text-light hero-subtitle hidden">We Serve You Better</h4>
             </div>
     </section>
+
     <section id="menu-food">
         <div>
             <h1 class="title-fb text-center">Drink</h1>
         </div>
         <div class="row w-100 d-flex flex-wrap justify-content-center p-2">
-            <div class="col" style="min-width: 300px;">
-                
+            <div class="col p-4 justify-content-center" style="min-width: 300px;">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="img-drink" style="background-image: url('assets/coffee (1).jpg');"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="img-drink" style="background-image: url('assets/coffee (2).jpg');"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Second slide label</h5>
+                          <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="img-drink" style="background-image: url('assets/coffee (3).jpg');"></div>
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
             <div class="col d-flex p-2 justify-content-center">
-                <table class="table table-borderless p-2 w-100">
-                    <tr class="border-bottom w-100">
-                        <td style="width: 50%;">Beverage</td>
-                        <td class="text-light text-center">Hot</td>
-                        <td class="text-light text-center">Ice</td>
-                    </tr>
-                    <tr>
-                        <td style="width: 50%;">Black Coffee</td>
-                        <td class="text-center">4k</td>
-                        <td class="text-center">6k</td>
-                    </tr>
-                </table>
+                <div class="coffee" style="overflow-y: scroll; height: 400px; width: 95%;">
+                    <table class="table table-borderless p-2 w-100" >
+                        <tr class="border-bottom w-100">
+                            <td style="width: 50%;">Beverage</td>
+                            <td class="text-light text-center">Hot</td>
+                            <td class="text-light text-center">Ice</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Black Coffee</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">White Coffee</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Good Day Cappucino</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Good Day Freeze</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Good Day Moccachino</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Chocolatos</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Machalate</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Strawberry</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%;">Mango</td>
+                            <td class="text-center">4k</td>
+                            <td class="text-center">6k</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
