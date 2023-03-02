@@ -1,0 +1,117 @@
+@font-face {
+    font-family: Clock;
+    src: url(assets/alarm\ clock.ttf);
+}
+
+@font-face {
+    font-family: Hercey;
+    src: url(assets/Herchey\ Script.otf);
+}
+
+@font-face {
+    font-family: Hercey_serif;
+    src: url(assets/Herchey\ Serif.otf);
+}
+
+
+
+.title {
+    background-color: white;
+    border: solid #212529 2px;
+    padding: 0px 10px;
+}
+
+.text-title{
+    text-decoration: none;
+    color: white;
+    transition: 1s all ease;
+}
+
+.text-title:hover{
+    text-decoration: underline;
+    transform: scale(1.5);
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    max-height: min-content;
+}
+
+#hero {
+    background-image: url('assets/bg-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding-top: 100px;
+    position: relative;
+}
+
+#menu-food {
+    background-color: #212529;
+}
+
+#menu-drink {
+    background-color: #212529;
+}
+
+#food {
+    background-image: url('assets/sate.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+#drink {
+    background-image: url('assets/background\ brewing.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.title-hero {
+    font-size: 5rem;
+    font-family: Hercey;
+    color: white;
+    padding-left: 50px;
+}
+
+.hero-subtitle {
+    font-family: Hercey_serif;
+    font-size: 2rem;
+    padding-left: 140px;
+    position: absolute;
+    top: 190px;
+}
+
+.title-fb {
+    font-size: 3rem;
+    font-family: Hercey;
+    color: white;
+    padding-top: 30px;
+}
+
+.tick {
+    padding: 0;
+    margin: 0;
+    animation: second 1.1s infinite;
+}
+
+@keyframes second{
+    0% {
+        color: transparent;
+    } 100% {
+        color: black;
+    }
+}
+
+@media (max-width: 600px){
+    .hero-subtitle {
+        padding-left: 25px;
+        top: 200px;
+        text-align: center;
+    }
+}
